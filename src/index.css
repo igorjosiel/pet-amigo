@@ -10,7 +10,9 @@
   --color-app-bg: #f4f7fb;
   --color-primary: #1f3a5f;
   --color-secondary: #6b7280;
-  --color-border-input: #e6ecf5;
+  --color-blue-light: #e6ecf5;
+  --color-white: #ffffff;
+  --color-black: #000000;
 
   --font-poppins: "Poppins", sans-serif;
 }
@@ -18,5 +20,13 @@
 @layer base {
   html {
     @apply font-poppins;
+  }
+
+  body {
+    background-color: var(--color-app-bg);
+  }
+
+  h1 {
+    @apply text-primary font-bold;
   }
 }

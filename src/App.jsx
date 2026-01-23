@@ -1,8 +1,10 @@
+import Login from "./pages/login";
+
 function App() {
   return (
-    <>
-      <h1 className="text-8xl font-bold">Teste</h1>
-    </>
+    <main className="min-h-screen flex flex-row justify-center items-center w-[95%] m-auto">
+      <Login />
+    </main>
   );
 }
 
