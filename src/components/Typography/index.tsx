@@ -1,9 +1,4 @@
-import { cva } from "class-variance-authority";
-
-interface TypographyProps extends React.HTMLAttributes<HTMLParagraphElement> {
-  children: React.ReactNode;
-  variant?: "primary" | "secondary" | "error";
-}
+import { cva, type VariantProps } from "class-variance-authority";
 
 const typography = cva([], {
   variants: {
@@ -12,10 +7,20 @@ const typography = cva([], {
       secondary: [""],
       error: ["text-danger", "text-[14px]"],
     },
+    defaultVariants: {
+      variant: "primary",
+    },
   },
 });
 
-function Typography({ children, variant = "primary", ...props }: TypographyProps) {
+interface TypographyProps
+  extends
+    React.HTMLAttributes<HTMLParagraphElement>,
+    VariantProps<typeof typography> {
+  children: React.ReactNode;
+}
+
+function Typography({ children, variant, ...props }: TypographyProps) {
   return (
     <p className={typography({ variant })} {...props}>
       {children}
