@@ -1,8 +1,12 @@
-function Button({ children }) {
+interface ButtonProps {
+  children: React.ReactNode;
+}
+
+function Button({ children }: ButtonProps) {
   return (
     <button
       type="submit"
-      className="rounded-xl bg-baby-pink text-white font-medium h-10"
+      className="rounded-xl bg-baby-pink text-white font-medium h-10 cursor-pointer"
     >
       {children}
     </button>
