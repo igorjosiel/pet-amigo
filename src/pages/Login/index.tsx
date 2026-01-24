@@ -6,6 +6,7 @@ import { IoMdLock } from "react-icons/io";
 import Button from "../../components/Button";
 import Input from "../../components/Input";
 import Link from "../../components/Link";
+import Typography from "../../components/Typography";
 
 import { schemaLogin, type FormDataLogin } from "./schema";
 import logo from "../../assets/logo.png";
@@ -25,7 +26,7 @@ function Login() {
     <div className="flex flex-col items-center md:bg-background md:rounded-2xl px-8">
       <img src={logo} className="w-md" alt="Logo da aplicação" />
       <h1 className="text-2xl">Bem-vindo de volta!</h1>
-      <p className="text-primary text-base pt-2.5">Faça login para continuar</p>
+      <Typography>Faça login para continuar</Typography>
 
       <form
         onSubmit={handleSubmit(onSubmit)}
@@ -34,12 +35,12 @@ function Login() {
         <Input {...register("email")} type="email" placeholder="E-mail">
           <FiMail size={20} />
         </Input>
-        <p className="text-danger text-[14px]">{errors.email?.message}</p>
+        <Typography variant="error">{errors.email?.message}</Typography>
 
         <Input {...register("password")} type="password" placeholder="Senha">
           <IoMdLock size={20} />
         </Input>
-        <p className="text-danger text-[14px]">{errors.password?.message}</p>
+        <Typography variant="error">{errors.password?.message}</Typography>
 
         <Link>Esqueceu sua senha?</Link>
 
