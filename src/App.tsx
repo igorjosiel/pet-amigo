@@ -1,4 +1,4 @@
-import Login from "./pages/Login/inddex";
+import Login from "./pages/Login";
 
 function App() {
   return (
