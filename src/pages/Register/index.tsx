@@ -24,9 +24,9 @@ function Register() {
   const onSubmit = (data: FormDataRegister) => console.log(data);
 
   return (
-    <div className="flex flex-col items-center md:bg-background md:rounded-2xl px-8 py-12">
+    <div className="flex flex-col items-center md:bg-background md:rounded-2xl md:max-w-xl px-8 py-12">
       <h1>Crie sua conta!</h1>
-      
+
       <Typography className="text-center pt-3">
         Cadastre-se para encontrar ou adotar um pet
       </Typography>
@@ -121,7 +121,7 @@ function Register() {
           </Typography>
         </div>
 
-        <Button >Cadastrar</Button>
+        <Button>Cadastrar</Button>
       </form>
     </div>
   );

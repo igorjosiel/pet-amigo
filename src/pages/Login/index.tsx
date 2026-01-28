@@ -23,10 +23,10 @@ function Login() {
   const onSubmit = (data: FormDataLogin) => console.log(data);
 
   return (
-    <div className="flex flex-col items-center md:bg-background md:rounded-2xl px-8">
+    <div className="flex flex-col items-center md:bg-background md:rounded-2xl md:max-w-xl px-8">
       <img src={logo} className="w-md" alt="Logo da aplicação" />
       <h1>Bem-vindo de volta!</h1>
-      
+
       <Typography>Faça login para continuar</Typography>
 
       <form
@@ -62,7 +62,7 @@ function Login() {
         <Button>Entrar</Button>
       </form>
 
-      <p className="text-primary pt-5">
+      <p className="text-primary pt-5 pb-15">
         Não tem uma conta? <Link path="register">Cadastre-se</Link>
       </p>
     </div>
