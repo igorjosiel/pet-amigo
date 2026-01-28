@@ -32,12 +32,22 @@ function Login() {
         onSubmit={handleSubmit(onSubmit)}
         className="pt-8 flex flex-col gap-3 w-full"
       >
-        <Input {...register("email")} type="email" placeholder="E-mail">
+        <Input
+          {...register("email")}
+          type="email"
+          placeholder="E-mail"
+          aria-label="E-mail"
+        >
           <FiMail size={20} />
         </Input>
         <Typography variant="error">{errors.email?.message}</Typography>
 
-        <Input {...register("password")} type="password" placeholder="Senha">
+        <Input
+          {...register("password")}
+          type="password"
+          placeholder="Senha"
+          aria-label="Senha"
+        >
           <IoMdLock size={20} />
         </Input>
         <Typography variant="error">{errors.password?.message}</Typography>

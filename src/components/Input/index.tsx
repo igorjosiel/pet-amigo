@@ -7,7 +7,12 @@ export function Input({ children: icon, className, ...props }: InputProps) {
   return (
     <div className="relative w-full">
       {icon && (
-        <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2">{icon}</span>
+        <span
+          className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2"
+          aria-hidden="true"
+        >
+          {icon}
+        </span>
       )}
 
       <input
