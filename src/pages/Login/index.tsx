@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { FiMail } from "react-icons/fi";
-import { IoMdLock } from "react-icons/io";
+import { GoLock } from "react-icons/go";
 
 import Button from "../../components/Button";
 import Input from "../../components/Input";
@@ -38,7 +38,7 @@ function Login() {
           placeholder="E-mail"
           aria-label="E-mail"
         >
-          <FiMail size={20} />
+          <FiMail size={18} />
         </Input>
         <Typography variant="error">{errors.email?.message}</Typography>
 
@@ -48,7 +48,7 @@ function Login() {
           placeholder="Senha"
           aria-label="Senha"
         >
-          <IoMdLock size={20} />
+          <GoLock size={18} />
         </Input>
         <Typography variant="error">{errors.password?.message}</Typography>
 
