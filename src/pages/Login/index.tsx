@@ -52,13 +52,13 @@ function Login() {
         </Input>
         <Typography variant="error">{errors.password?.message}</Typography>
 
-        <Link>Esqueceu sua senha?</Link>
+        <Link path="forgot-password">Esqueceu sua senha?</Link>
 
         <Button>Entrar</Button>
       </form>
 
       <p className="text-primary pt-5">
-        Não tem uma conta? <Link>Cadastre-se</Link>
+        Não tem uma conta? <Link path="register">Cadastre-se</Link>
       </p>
     </div>
   );
