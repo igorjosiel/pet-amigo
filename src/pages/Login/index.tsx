@@ -25,32 +25,37 @@ function Login() {
   return (
     <div className="flex flex-col items-center md:bg-background md:rounded-2xl px-8">
       <img src={logo} className="w-md" alt="Logo da aplicação" />
-      <h1 className="text-2xl">Bem-vindo de volta!</h1>
+      <h1>Bem-vindo de volta!</h1>
+      
       <Typography>Faça login para continuar</Typography>
 
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="pt-8 flex flex-col gap-3 w-full"
       >
-        <Input
-          {...register("email")}
-          type="email"
-          placeholder="E-mail"
-          aria-label="E-mail"
-        >
-          <FiMail size={18} />
-        </Input>
-        <Typography variant="error">{errors.email?.message}</Typography>
+        <div>
+          <Input
+            {...register("email")}
+            type="email"
+            placeholder="E-mail"
+            aria-label="E-mail"
+          >
+            <FiMail size={18} />
+          </Input>
+          <Typography variant="error">{errors.email?.message}</Typography>
+        </div>
 
-        <Input
-          {...register("password")}
-          type="password"
-          placeholder="Senha"
-          aria-label="Senha"
-        >
-          <GoLock size={18} />
-        </Input>
-        <Typography variant="error">{errors.password?.message}</Typography>
+        <div>
+          <Input
+            {...register("password")}
+            type="password"
+            placeholder="Senha"
+            aria-label="Senha"
+          >
+            <GoLock size={18} />
+          </Input>
+          <Typography variant="error">{errors.password?.message}</Typography>
+        </div>
 
         <Link path="forgot-password">Esqueceu sua senha?</Link>
 

@@ -3,9 +3,9 @@ import { cva, type VariantProps } from "class-variance-authority";
 const typography = cva([], {
   variants: {
     variant: {
-      primary: ["text-primary text-base pt-2.5"],
+      primary: ["text-primary text-base"],
       secondary: [""],
-      error: ["text-danger", "text-[14px]"],
+      error: ["text-danger text-[14px]"],
     },
     defaultVariants: {
       variant: "primary",
